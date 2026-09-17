@@ -1,0 +1,8 @@
+{
+  "name": "baro-incruit(김유민)",
+  "description": "Imported from GitHub: dvdkkk/baro-incruit",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

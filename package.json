@@ -1,0 +1,15 @@
+{
+  "name": "baro-incruit-fasttrack",
+  "version": "1.0.0",
+  "description": "인크루트 : 패스트트랙 - 모의평가와 60분 1:1 상담을 한 번에",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "mkdir -p dist && cp index.html dist/ && cp -r img dist/"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
