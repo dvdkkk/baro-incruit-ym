@@ -227,6 +227,10 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
     .header-cta-btn::before {
@@ -1417,24 +1421,28 @@
 
     .pricing-action-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
     }
 
     .btn-pricing-consult {
-      background: #eff6ff;
-      color: var(--primary-blue);
-      border: 1px solid #bfdbfe;
+      background: var(--primary-blue);
+      color: #ffffff;
+      border: 1px solid var(--primary-blue);
       font-size: 1.1em;
       font-weight: 700;
       padding: 16px 0;
       border-radius: 10px;
       text-align: center;
       transition: all 0.2s;
+      display: block;
+      box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+      text-decoration: none;
     }
 
     .btn-pricing-consult:hover {
-      background: #dbeafe;
+      background: var(--primary-dark-blue);
+      color: #ffffff;
     }
 
     .btn-pricing-buy {
@@ -1626,6 +1634,10 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
     .sticky-buy-btn::before {
@@ -2086,7 +2098,7 @@
         </nav>
 
         <div class="header-actions">
-          <button type="button" class="header-cta-btn" onclick="openConsultModal()">무료 상담 신청</button>
+          <a href="https://naver.me/GowQ3Uts" target="_blank" rel="noopener noreferrer" class="header-cta-btn">무료 상담 신청</a>
           <button type="button" class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="메뉴 토글">☰</button>
         </div>
       </div>
@@ -2146,12 +2158,9 @@
         </div>
 
         <div class="hero-cta-group">
-          <button type="button" class="btn-hero-primary" onclick="openConsultModal()">
+          <a href="https://naver.me/GowQ3Uts" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
             상담 신청하기
-          </button>
-          <button type="button" class="btn-hero-secondary" onclick="FastTrackBuyStart()">
-            결제하기
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -2570,12 +2579,9 @@
 
 
           <div class="pricing-action-row">
-            <button type="button" class="btn-pricing-consult" onclick="openConsultModal()">
-              상담하기
-            </button>
-            <button type="button" class="btn-pricing-buy" onclick="FastTrackBuyStart()">
-              구매하기
-            </button>
+            <a href="https://naver.me/GowQ3Uts" target="_blank" rel="noopener noreferrer" class="btn-pricing-consult">
+              상담 신청하기
+            </a>
           </div>
         </div>
       </div>
@@ -2674,7 +2680,7 @@
         </div>
         <div class="sticky-right">
           <div class="sticky-price">220,000원</div>
-          <button type="button" class="sticky-buy-btn" onclick="FastTrackBuyStart()">구매하기</button>
+          <a href="https://naver.me/GowQ3Uts" target="_blank" rel="noopener noreferrer" class="sticky-buy-btn">상담신청</a>
         </div>
       </div>
     </div>
@@ -2851,16 +2857,7 @@
     let isConsultSubmitting = false;
 
     function openConsultModal() {
-      isConsultSubmitting = false;
-      const modal = document.getElementById('consultModal');
-      modal.classList.add('active');
-      const form = document.getElementById('consultForm');
-      if (form) {
-        form.style.display = 'block';
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.disabled = false;
-      }
-      document.getElementById('consultSuccess').style.display = 'none';
+      window.open('https://naver.me/GowQ3Uts', '_blank', 'noopener,noreferrer');
     }
 
     function closeConsultModal() {
